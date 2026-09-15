@@ -2,6 +2,16 @@
 
 const CATEGORY_CARDS = [
   {
+    id: "campaigns",
+    name: "Özel Kampanyalar & Fırsatlar",
+    nameEn: "Special Offers & Happy Hour",
+    image: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=900&q=85",
+    subtitle: "Happy Hour kokteylleri, 19:00 fıçı bira indirimleri ve 5+1 shotlar",
+    subtitleEn: "Happy Hour cocktails, 19:00 draft beer specials & 5+1 shot bundles",
+    badge: "Fırsatlar",
+    highlight: true
+  },
+  {
     id: "cocktails",
     name: "Kokteyller & İmzalar",
     nameEn: "Cocktails & Signatures",
@@ -74,6 +84,7 @@ const I18N = {
     close: "Kapat",
     currency: "₺",
     itemCount: "çeşit",
+    campaignBadge: "FIRSAT",
     all: "Tümü"
   },
   en: {
@@ -82,6 +93,7 @@ const I18N = {
     close: "Close",
     currency: "₺",
     itemCount: "items",
+    campaignBadge: "SPECIAL",
     all: "All"
   }
 };
@@ -167,14 +179,18 @@ function renderCategoryCards() {
   const isTr = state.lang === 'tr';
 
   container.innerHTML = CATEGORY_CARDS.map(cat => {
-    const count = state.products.filter(p => p.categoryId === cat.id).length;
+    const count = cat.id === 'campaigns' 
+      ? state.products.filter(p => p.isCampaign).length 
+      : state.products.filter(p => p.categoryId === cat.id).length;
     const title = isTr ? cat.name : cat.nameEn;
     const subtitle = isTr ? cat.subtitle : cat.subtitleEn;
 
     return `
       <div 
         onclick="openCategory('${cat.id}')"
-        class="category-card h-44 flex flex-col justify-end p-4 group"
+        class="category-card h-44 flex flex-col justify-end p-4 group ${
+          cat.highlight ? 'ring-1 ring-amber-500/40 shadow-amber-500/10' : ''
+        }"
       >
         <!-- Arka Plan Kapak Resmi -->
         <img 
@@ -187,6 +203,15 @@ function renderCategoryCards() {
         
         <!-- Karartma Gradyanı -->
         <div class="cover-overlay"></div>
+
+        <!-- Üst Sol: Fırsat Rozeti (Varsa) -->
+        ${cat.badge ? `
+          <div class="absolute top-3 left-3.5 z-10">
+            <span class="bg-amber-500 text-black text-[10px] font-extrabold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-md">
+              ${cat.badge}
+            </span>
+          </div>
+        ` : ''}
 
         <!-- Üst Sağ: Çeşit Sayısı -->
         <div class="absolute top-3 right-3.5 z-10">
@@ -253,7 +278,14 @@ function renderSubFilters() {
 
   let options = [];
 
-  if (state.currentCategory === 'spirits') {
+  if (state.currentCategory === 'campaigns') {
+    options = [
+      { id: 'all', label: 'Tümü' },
+      { id: 'Kokteyl', label: 'Kokteyller' },
+      { id: 'Bira', label: 'Fıçı Biralar' },
+      { id: 'Shot', label: '5+1 Shotlar' }
+    ];
+  } else if (state.currentCategory === 'spirits') {
     options = [
       { id: 'all', label: 'Tümü' },
       { id: 'Viski', label: 'Viski' },
@@ -330,6 +362,16 @@ function renderProducts() {
   const t = I18N[state.lang];
 
   let filtered = state.products.filter(item => {
+    if (state.currentCategory === 'campaigns') {
+      if (!item.isCampaign) return false;
+      if (state.subTypeFilter !== 'all') {
+        if (state.subTypeFilter === 'Kokteyl' && item.categoryId !== 'cocktails') return false;
+        if (state.subTypeFilter === 'Bira' && item.categoryId !== 'beers') return false;
+        if (state.subTypeFilter === 'Shot' && item.categoryId !== 'shots') return false;
+      }
+      return true;
+    }
+
     if (state.currentCategory && item.categoryId !== state.currentCategory) {
       return false;
     }
@@ -366,7 +408,7 @@ function renderProducts() {
         onclick="openProductDetail('${item.id}')"
         class="glass-card rounded-2xl p-3 flex gap-3.5 items-center cursor-pointer ${
           !item.inStock ? 'out-of-stock' : ''
-        }"
+        } ${item.isCampaign ? 'ring-1 ring-amber-500/30' : ''}"
       >
         ${hasImage ? `
           <div class="bottle-thumb">
@@ -385,9 +427,11 @@ function renderProducts() {
         <div class="flex-1 min-w-0 flex flex-col justify-between py-0.5">
           <div>
             <div class="flex items-baseline justify-between gap-2">
-              <h3 class="font-bold text-white text-[13.5px] leading-snug">
-                ${title}
-              </h3>
+              <div class="flex items-center gap-1.5 min-w-0">
+                <h3 class="font-bold text-white text-[13.5px] leading-snug truncate">
+                  ${title}
+                </h3>
+              </div>
               <span class="text-amber-400 font-extrabold text-sm whitespace-nowrap ml-2 font-mono">
                 ${item.price} ${t.currency}
               </span>
@@ -399,7 +443,12 @@ function renderProducts() {
             ` : ''}
           </div>
 
-          <div class="flex items-center gap-2 mt-1.5">
+          <div class="flex items-center gap-2 mt-1.5 flex-wrap">
+            ${item.isCampaign ? `
+              <span class="bg-amber-500/20 text-amber-400 border border-amber-500/40 text-[9px] font-extrabold px-2 py-0.5 rounded-md tracking-wider">
+                ${t.campaignBadge}
+              </span>
+            ` : ''}
             ${item.volume ? `
               <span class="text-[10px] text-stone-500 font-mono">${item.volume}</span>
             ` : ''}
@@ -466,7 +515,8 @@ window.openProductDetail = function(productId) {
         <span class="text-2xl font-black text-amber-400 whitespace-nowrap font-mono">${item.price} ${t.currency}</span>
       </div>
 
-      <div class="flex items-center gap-2 mb-3 text-xs text-stone-400">
+      <div class="flex items-center gap-2 mb-3 text-xs text-stone-400 flex-wrap">
+        ${item.isCampaign ? `<span class="bg-amber-500/20 text-amber-400 border border-amber-500/50 px-2.5 py-0.5 rounded-lg text-[11px] font-extrabold tracking-wider">Özel Kampanya</span>` : ''}
         ${item.subType ? `<span class="badge-sub px-2.5 py-0.5 rounded text-[11px] font-medium">${item.subType}</span>` : ''}
         ${item.volume ? `<span class="bg-stone-800 px-2 py-0.5 rounded text-stone-300 font-mono">${item.volume}</span>` : ''}
       </div>

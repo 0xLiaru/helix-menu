@@ -1,6 +1,11 @@
 ﻿const MENU_DATA = {
     "categories":  [
                        {
+                           "id":  "campaigns",
+                           "name":  "Özel Kampanyalar \u0026 Fırsatlar",
+                           "nameEn":  "Special Offers \u0026 Happy Hour"
+                       },
+                       {
                            "id":  "cocktails",
                            "name":  "Kokteyller \u0026 İmzalar",
                            "nameEn":  "Cocktails \u0026 Signatures"
@@ -48,6 +53,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1014_1784137599744.webp",
                          "description":  "Acılık: Bitter nedeniyle hafif, Alkol hissi: Yüksek (viski yoğun), Aroma: Portakal kabuğu ve bitter baharatlı bir koku verir.",
                          "descriptionEn":  "Bitterness: mild, due to the bitters. Alcohol presence: high (whiskey-forward). Aroma: orange peel with a bitter, subtly spicy nose.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -61,6 +67,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4041_1784138378680.webp",
                          "description":  "Konyak, portakal likörü ve taze limon suyunun zarif birleşimiyle hazırlanan Sidecar, narenciye ferahlığı ve kusursuz dengesiyle size unutulmaz bir klasik kokteyl deneyimi sunuyor.",
                          "descriptionEn":  "Prepared with the elegant combination of cognac, orange liqueur, and fresh lemon juice, the Sidecar offers you an unforgettable classic cocktail experience with its citrus freshness and perfect balance.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -74,6 +81,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/vermut/garrone_bitter.webp",
                          "description":  "Portakal, vanilya ve ahududu notaları içeren, acı-tatlı dengeli geleneksel İtalyan bitter likörü.",
                          "descriptionEn":  "A traditional Italian bitter liqueur with a balanced bittersweet taste, featuring notes of orange, vanilla, and raspberry.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -87,6 +95,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/mezcal/del_maquey_vida.webp",
                          "description":  "Oaxaca San Luis Del Rio\u0027da espadín agavlarından üretilen organik zanaatkar mezcal. Odun ateşinde pişirilmiş agav, bal, vanilya ve dumanlı bitiş.",
                          "descriptionEn":  "Del Maguey Vida Mezcal is an artisanal, organic mezcal crafted from espadín agaves in San Luis Del Rio, Oaxaca. Twice distilled in wood-fired copper stills, it offers a versatile profile with notes of fruit, honey, vanilla, roast agave, ginger, cinnamon, and a smoky finish.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -100,6 +109,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/lagavulin_8.webp",
                          "description":  "Duble 1320 ₺ - İsli, deniz yosunlu ve yoğun turba karakteriyle efsanevi Islay tek malt viskisi.",
                          "descriptionEn":  "Double 1320₺",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -113,6 +123,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/talisker_10.webp",
                          "description":  "Duble 1320 ₺ - Skye Adası\u0027nın hırçın deniz tuzu ve karabiber notalarını taşıyan seçkin tek malt viski.",
                          "descriptionEn":  "Double 1320₺",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -126,6 +137,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4133_1787935368836.webp",
                          "description":  "Baileys İrlanda kreması, şeftali likörü ve nar şurubu ile hazırlanan görsel olarak dikkat çekici katmanlı shot.",
                          "descriptionEn":  "A visually striking and popular shot cocktail made with Irish cream, peach schnapps (or vodka/banana liqueur variants), and grenadine syrup, which causes the cream to curdle for a \u0027brain\u0027 effect.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -139,6 +151,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/jim_beam.webp",
                          "description":  "Duble 735 ₺ - Meşe fıçılarda dinlendirilmiş, karamel ve vanilya notalarıyla geleneksel Kentucky Bourbon viskisi.",
                          "descriptionEn":  "Double 735₺",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -152,6 +165,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/konyak/courvoisier_vs.webp",
                          "description":  "Dünyaca ünlü Fransız konyak evi Courvoisier\u0027den, meşe fıçılarda olgunlaştırılmış zengin ve çiçeksi konyak.",
                          "descriptionEn":  "A distilled alcoholic beverage from the French cognac brand Courvoisier.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -165,6 +179,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/mezcal/ojo_de_tigre_joven.webp",
                          "description":  "Espadín ve Tobalá agavlarından zanaatkar yöntemlerle damıtılmış, narenciye ve hafif isli dengeli tat profiline sahip Meksika mezcali.",
                          "descriptionEn":  "Ojo de Tigre Joven is an artisanal mezcal from Mexico, crafted from sustainably cultivated Espadín agave from Oaxaca and Tobalá agave from Puebla. This unaged expression offers a balanced and approachable flavor profile with citrus notes (apple, green pear), cooked agave, caramel, and smoked cacao, with a subtle sweetness and fruity finish. It is known for being smoother with less overpowering smoke compared to some other mezcals.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -178,6 +193,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4046_1784138597875.webp",
                          "description":  "Cin, votka ve Lillet Blanc\u0027ın güçlü birlikteliğiyle hazırlanan Vesper, keskin ve ikonik karakteriyle size efsanevi ve sofistike bir kokteyl deneyimi sunuyor.",
                          "descriptionEn":  "Prepared with the powerful combination of gin, vodka, and Lillet Blanc, the Vesper offers you a legendary and sophisticated cocktail experience with its sharp and iconic character.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -191,6 +207,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4040_1784138324408.webp",
                          "description":  "İskoç viskisinin güçlü karakteri ile Drambuie likörünün ballı ve baharatlı notalarının mükemmel uyumuyla hazırlanan Rusty Nail, damakta zengin ve sofistike bir tat bırakan efsanevi bir klasiktir.",
                          "descriptionEn":  "Prepared with the perfect harmony of Scotch whisky\u0027s strong character and Drambuie liqueur\u0027s honeyed and spicy notes, the Rusty Nail is a legendary classic that leaves a rich and sophisticated taste on the palate.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -204,6 +221,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1016_1784137685962.webp",
                          "description":  "Votkanın pürüzsüz dokusu ile kahve likörünün derin ve yoğun aromasının kusursuz birleşimi olan Black Russian, kahve tutkunlarına sert ve zarif bir kokteyl deneyimi vadediyor.",
                          "descriptionEn":  "A flawless combination of vodka\u0027s smooth texture and coffee liqueur\u0027s deep, intense aroma, the Black Russian promises a strong and elegant cocktail experience for coffee lovers.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -217,6 +235,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4047_1784138635745.webp",
                          "description":  "İsli mezcalin çarpıcı aroması, Aperol\u0027ün hafif acımsı narenciye notaları ve Maraschino likörünün tatlı dokunuşuyla hazırlanan Division Bell, dengeli ve modern profiliyle damaklarda büyüleyici bir iz bırakıyor.",
                          "descriptionEn":  "Prepared with the striking aroma of smoky mezcal, the slightly bitter citrus notes of Aperol, and the sweet touch of Maraschino liqueur, the Division Bell leaves a fascinating mark on the palate with its balanced and modern profile.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -230,6 +249,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/tekila/olmeca_dark_chocolate.webp",
                          "description":  "Yoğun bitter çikolata aromalı Olmeca tekila",
                          "descriptionEn":  "Olmeca tequila with an intense dark chocolate flavor",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -243,6 +263,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/rom/havana_club_7.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -256,6 +277,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1154_1786706062583.webp",
                          "description":  "Özenle seçilmiş fındık, badem, kaju ve lezzetli kuruyemiş karışımı.",
                          "descriptionEn":  "A special selection of delicious mixed nuts and snacks.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -269,6 +291,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4044_1784138522717.webp",
                          "description":  "Votka, domates suyu ve karakteristik baharatların cesur harmanıyla hazırlanan Bloody Mary, zengin aroması ve hafif acımsı dokunuşuyla size canlandırıcı ve sıra dışı bir kokteyl deneyimi sunuyor.",
                          "descriptionEn":  "Prepared with the bold blend of vodka, tomato juice, and characteristic spices, the Bloody Mary offers you an invigorating and extraordinary cocktail experience with its rich aroma and slightly spicy touch.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -282,6 +305,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1155_1786706075114.webp",
                          "description":  "Taze kavrulmuş ve tuzlanmış yer fıstığı.",
                          "descriptionEn":  "Roasted and salted peanuts",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -295,6 +319,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4043_1784138476843.webp",
                          "description":  "Votka, rom, cin ve tekilanın güçlü birlikteliğinin Midori\u0027nin tatlı kavun aromasıyla buluştuğu Tokyo Ice Tea, canlı yeşil rengi ve çarpıcı lezzetiyle size egzotik bir serinlik vadediyor.",
                          "descriptionEn":  "Prepared with the powerful combination of vodka, rum, gin, and tequila meeting the sweet melon aroma of Midori, the Tokyo Ice Tea promises you an exotic coolness with its vibrant green color and striking taste.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -308,6 +333,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/cin/malfy_pink.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -321,6 +347,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4045_1784138558555.webp",
                          "description":  "Cin, mürver çiçeği likörü ve taze elma suyunun zarif buluşmasıyla hazırlanan English Garden, çiçeksi notaları ve ferahlatıcı dokusuyla size adeta bir İngiliz bahçesinde huzurlu bir mola sunuyor.",
                          "descriptionEn":  "Prepared with the elegant meeting of gin, elderflower liqueur, and fresh apple juice, the English Garden offers you a peaceful break in an English garden with its floral notes and refreshing texture.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -334,6 +361,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1018_1784137780884.webp",
                          "description":  "Votka, kuru vermut ve zeytin veya limon bükümü ile hazırlanan klasik kokteyl.",
                          "descriptionEn":  "Classic cocktail prepared with vodka, dry vermouth, and an olive or lemon twist.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -347,6 +375,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1012_1784137529496.webp",
                          "description":  "Jack Daniel\u0027s Tennessee Whiskey, üçlü sek likör, taze limon suyu ve limon-misket limonu sodası ile hazırlanan ferahlatıcı bir kokteyl.",
                          "descriptionEn":  "A refreshing cocktail made with Jack Daniel\u0027s Tennessee Whiskey, triple sec, fresh lemon juice, and a lemon-lime soda.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -360,6 +389,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1029_1786704577251.webp",
                          "description":  "5 adet tekila shot alana 1 adet hediye!",
                          "descriptionEn":  "",
+                         "isCampaign":  true,
                          "inStock":  true
                      },
                      {
@@ -373,6 +403,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1030_1786704657326.webp",
                          "description":  "Finlandiya\u0027nın buz gibi otlu likörü Valhalla Shot\u0027tan 5 tane alana 1 tane bedava!",
                          "descriptionEn":  "Buy 5 Valhalla Shots, get 1 free! Valhalla is a Finnish herbal liqueur.",
+                         "isCampaign":  true,
                          "inStock":  true
                      },
                      {
@@ -386,6 +417,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1031_1786704674318.webp",
                          "description":  "5 adet Jameson İrlanda viski shot alana 1 adet hediye!",
                          "descriptionEn":  "",
+                         "isCampaign":  true,
                          "inStock":  true
                      },
                      {
@@ -399,6 +431,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/jp_wisers_10.webp",
                          "description":  "Kanada çavdar viskisi, 10 yıl meşe fıçılarda olgunlaştırılmış.",
                          "descriptionEn":  "Canadian rye whisky, aged for 10 years in oak casks.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -412,6 +445,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/gentleman_jack.webp",
                          "description":  "Meşe fıçılarda iki kez kömürden süzülerek elde edilen, yumuşak içimli ve dengeli bir Tennessee viskisi.",
                          "descriptionEn":  "A smooth and balanced Tennessee whiskey, charcoal-mellowed twice for exceptional smoothness.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -425,6 +459,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/aberlour_abunadh.webp",
                          "description":  "İspanyol Oloroso şeri fıçılarında olgunlaştırılmış, yoğun gövdeli, kuru meyve ve baharat notaları içeren, yüksek alkollü ikonik viski.",
                          "descriptionEn":  "An iconic, high-proof whisky matured in Spanish Oloroso sherry casks, featuring a full body with rich notes of dried fruits and spices.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -438,6 +473,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1008_1784137324617.webp",
                          "description":  "Jägermeister, taze nane, misket limonu, esmer şeker ve soda ile hazırlanan ferahlatıcı bir kokteyl.",
                          "descriptionEn":  "A refreshing cocktail prepared with Jägermeister, fresh mint, lime, brown sugar, and soda.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -451,6 +487,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/vermut/garrone_bianco.webp",
                          "description":  "Aromatik otlar ve narenciye dokunuşlarıyla hafif tatlı klasik İtalyan beyaz vermutu.",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -464,6 +501,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/su/su_50cl.webp",
                          "description":  "Doğal kaynak suyu.",
                          "descriptionEn":  "Clear, pure, and natural drinking water.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -477,6 +515,7 @@
                          "image":  "",
                          "description":  "Yoğun gövdeli, zengin kremalı taze çekilmiş İtalyan espressosu.",
                          "descriptionEn":  "For those who love intense coffee flavor.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -490,6 +529,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4106_1786585959717.webp",
                          "description":  "Bumbu Rom ve bergamot çayı harmanıyla demlenen sofistike kokteyl.",
                          "descriptionEn":  "Bumbu Rum \nBergamot Tea",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -503,6 +543,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/972_1781545335542.webp",
                          "description":  "Tarçın ve armudun isli notalarla kusursuz uyumundan doğan imza lezzet. Mekanın ruhunu her yudumda hissettiren dengeli bir serüven. (Granny Smith sosu, Limoncello, tatlı ekşi karışım, St-Germain, Irish whiskey liqueur)",
                          "descriptionEn":  "A signature flavor born from the perfect harmony of cinnamon and pear with smoky notes. A balanced adventure that lets you feel the spirit of the venue in every sip. (Granny Smith sauce, Limoncello, sweet \u0026 sour mix, St-Germain, Irish whiskey liqueur) 🍐🥃",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -516,6 +557,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4107_1786585985776.webp",
                          "description":  "Bickens Dry Gin, hibiscus cordial, lime suyu ve bal şurubu ile hazırlanan canlı yakut rengi kokteyl.",
                          "descriptionEn":  "Signature cocktail prepared with Bickens Dry Gin, Hibiscus Cordial, Lime Juice, and Honey Syrup.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -529,6 +571,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1007_1784137287434.webp",
                          "description":  "Jägermeister likörü ve enerji içeceği ile hazırlanan popüler bir kokteyl.",
                          "descriptionEn":  "A popular cocktail made with Jägermeister liqueur and an energy drink.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -542,6 +585,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/aberlour_12.webp",
                          "description":  "Speyside bölgesinin karakteristik meyvemsi ve baharatlı notalarını taşıyan, şeri fıçılarında olgunlaştırılmış zengin ve dengeli bir single malt viski.",
                          "descriptionEn":  "A rich and balanced single malt whisky matured in sherry casks, featuring the characteristic fruity and spicy notes of the Speyside region.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -555,6 +599,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/glenlivet_15.webp",
                          "description":  "Fransız meşe fıçılarında olgunlaştırılmış, baharatlı ve zengin aromalı single malt viski.",
                          "descriptionEn":  "A rich and spicy single malt whisky, matured in French oak casks.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -568,6 +613,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1015_1784137650026.webp",
                          "description":  "Az malzemeli ama kusursuz bir denge sunar. Whiskey\u0027i gizlemez, karakterini ortaya çıkarır; hem sert içki sevene hem ferah içim arayana hitap eder.",
                          "descriptionEn":  "It uses only a few ingredients yet delivers perfect balance; it doesn’t mask the whiskey but highlights its character, appealing both to those who enjoy bold spirits and to those looking for a refreshing drink",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -581,6 +627,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4039_1785599789955.webp",
                          "description":  "Beyaz rom, tatlı ananas suyu ve hindistan cevizi kreminin tropikal buluşmasıyla hazırlanan Pina Colada, kremsi dokusu ve eşsiz lezzetiyle sizi adeta güneşli bir sahil kıyısına götürüyor.",
                          "descriptionEn":  "Prepared with the tropical meeting of white rum, sweet pineapple juice, and coconut cream, the Pina Colada practically takes you to a sunny beach with its creamy texture and unique taste.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -594,6 +641,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1006_1784137184556.webp",
                          "description":  "Tennessee viskisinin güçlü karakteri ile egzotik meyve likörünün eşsiz uyumunu sunan Jack Safari, tatlı notalarıyla damaklarda zengin ve çarpıcı bir tat bırakan iddialı bir kokteyl.",
                          "descriptionEn":  "Offering the unique harmony of Tennessee whiskey\u0027s strong character and exotic fruit liqueur, the Jack Safari is an assertive cocktail that leaves a rich and striking taste on the palate with its sweet notes.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -607,6 +655,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1017_1784137742195.webp",
                          "description":  "Kökeni 19. yüzyıl sonlarına dayanan, cin ve sek vermut kombinasyonu ile ikonikleşmiş zamansız bir klasik.",
                          "descriptionEn":  "Its origins date back to the late 19th century. Over time, it became especially famous for the gin and dry vermouth combination. Its popularity grew even further with James Bond’s iconic line, “shaken, not stirred.” 🍸",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -620,6 +669,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/vermut/garrone_extra_dry.webp",
                          "description":  "Sek profilli, sofistike ot notalarına sahip İtalyan vermutu.",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -633,6 +683,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1002_1784137060205.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -646,6 +697,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1013_1784137556622.webp",
                          "description":  "Cin, kırmızı vermut ve Campari\u0027nin eşit oranlarda karışımından oluşan, acı-tatlı ve narenciye notalarıyla dünyanın en seçkin aperitifi.",
                          "descriptionEn":  "It is a classic and elegant Italian cocktail. It is made from equal parts gin, sweet red vermouth, and Campari. Known for its bitter-sweet flavor, it features citrus notes and a bold character, making it especially popular as an aperitif. It is served over ice, usually garnished with an orange slice or peel — a symbol of understated yet refined elegance. 🍊🍸",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -659,6 +711,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/968_1781545367938.webp",
                          "description":  "Beefeater Cin ve taze narenciyelerin keskin ferahlığıyla enerjik bir başlangıç. Geçmişe selam duran, canlı ve dengeli bir imza lezzet! (Beefeater Cin, limon suyu, şeker, yeşil lime sosu)",
                          "descriptionEn":  "An energetic start with the crisp freshness of Beefeater Gin and fresh citrus. 🍋🍸A vibrant and well-balanced signature flavor that nods to the past! (Beefeater Gin, lemon juice, sugar, green lime sauce)",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -672,6 +725,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4108_1786586053650.webp",
                          "description":  "Çıtır tavuk parçaları, sigara böreği, soğan halkası, mozzarella çubukları, falafel topları, kaşık patates, acı sos ve imza dip sos.",
                          "descriptionEn":  "Served with Crispy Chicken Pieces, Cheese Rolls, Onion Rings, Mozzarella Sticks, Falafel Balls, Spoon Potatoes, Hot Sauce, and Dip Sauce.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -685,6 +739,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/3913_1783042194124.webp",
                          "description":  "Altın sarısı çıtır tavuk lokmaları, kaşık patates, imza dip sos, patlamış mısır kırıntıları ve sıcak cheddar peynir sosu. (850 kcal)",
                          "descriptionEn":  "Carefully prepared chicken bites with a golden, ultra-crispy coating; perfectly paired with delicious scoop fries, our signature dip sauce, an extraordinary touch of crunchy popcorn crumbs, and a rich, warm cheddar cheese sauce. A game-changing feast of flavor for cheese and crunch lovers!\n\n(Allergens \u0026 Calories: Contains gluten, dairy product, mustard product. / 850 kcal)",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -698,6 +753,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/3915_1783042837263.webp",
                          "description":  "Ustalıkla panelenmiş altın rengi çıtır tavuk finger parçaları, sıcacık kaşık patates ve özel dip sosumuzla. (700 kcal)",
                          "descriptionEn":  "A simple yet assertive flavor for those who always stick to the classics. Expertly breaded and perfectly fried golden crispy chicken fingers; served alongside hot scoop fries and our special dip sauce that takes the flavor of the chicken to the peak. Pure crunch, pure flavor.\n\n(Allergens \u0026 Calories: Contains gluten, dairy product, mustard product. / 700 kcal)",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -711,6 +767,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/3906_1783040258463.webp",
                          "description":  "Dışı çıtır, içi lokum kıvamında taze kalamar halkaları; geleneksel tartar sos ve kaşık patates eşliğinde. (930 kcal)",
                          "descriptionEn":  "Bringing the fresh essence of the sea to your table, these perfectly golden calamari rings are irresistibly crispy on the outside while remaining tender and delicate on the inside. Served with traditional tartar sauce and golden potato wedges, this elegant seafood classic is a timeless favorite. (Allergens: Gluten, Dairy, Mustard) - 930 kcal",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -724,6 +781,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4038_1784138157803.webp",
                          "description":  "Beyaz rom, taze sıkılmış misket limonu suyu ve tatlı şurubun kusursuz dengesiyle hazırlanan Daiquiri, ferahlatıcı ve ipeksi dokusuyla size tropikal bir serinlik sunuyor.",
                          "descriptionEn":  "Prepared with the perfect balance of white rum, freshly squeezed lime juice, and sweet syrup, the Daiquiri offers you a tropical coolness with its refreshing and silky texture.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -737,6 +795,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4042_1784138429477.webp",
                          "description":  "Kahve likörü, Baileys İrlanda kreması ve portakal likörünün kusursuz katmanlarıyla hazırlanan efsanevi shot.",
                          "descriptionEn":  "Prepared with the flawless layers of coffee liqueur, Irish cream, and orange liqueur, the B52 offers you an unforgettable shot experience that appeals to both the eye and the palate with its intense aroma and striking presentation.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -750,6 +809,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4109_1786586095706.webp",
                          "description":  "Çıtır tavuk parçaları, kalamar, Moğol karides, çıtır midye, kızarmış bamya turşusu, soğan halkası, kaşık patates, acı sos, tartar sos ve dip sos.",
                          "descriptionEn":  "A rich beer platter served with Crispy Chicken Pieces, Calamari, Mongolian Shrimp, Crispy Mussels, Fried Pickles, Onion Rings, Spoon Potatoes, Hot Sauce, Dip Sauce, and Tartar Sauce.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -763,6 +823,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4048_1784138679903.webp",
                          "description":  "Karayip romlarının taze ananas, portakal suları ve grenadinin tatlı dokunuşuyla harmanlanmasıyla hazırlanan Reggae Rum Punch, canlı rengi ve enerjik lezzetiyle size egzotik bir ada coşkusu sunuyor.",
                          "descriptionEn":  "Prepared by blending Caribbean rums with fresh pineapple and orange juices, and the sweet touch of grenadine, the Reggae Rum Punch offers you an exotic island excitement with its vibrant color and energetic taste.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -776,6 +837,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4049_1784138867113.webp",
                          "description":  "Deacon Whiskey, Drambuie, limon suyu, bal şurubu ve aromatik bitter. Uzun bitişli, ballı, hafif isli ve damakta kalıcı bir imza lezzet.",
                          "descriptionEn":  "Contains Deacon Whiskey, Drambuie, lemon juice, honey syrup, and aromatic bitters. Features a long finish with honey notes, a hint of smoke, and a lingering taste.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -789,6 +851,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/3912_1783035939628.webp",
                          "description":  "Bal karamelinin ipeksi tatlılığı ile imza acı sosun kusursuz dengesi. Altın sarısı çıtır tavuk lokmaları ve kaşık patates eşliğinde. (760 kcal)",
                          "descriptionEn":  "A flawless balance bringing together the silky sweetness of honey caramel and the fiery character of our signature hot sauce. Golden crispy coated chicken bites are served with a special dip sauce that elevates the flavor experience to its peak. Designed for those seeking a taste that is both bold and elegant. (Allergens: Gluten, Dairy, Mustard) - 760 kcal",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -802,6 +865,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/3914_1783042432833.webp",
                          "description":  "Dışı ekstra çıtır tavuk finger parçaları, doyurucu kaşık patates, şefin dip sosu ve isli barbekü chimichurri sos ile. (765 kcal)",
                          "descriptionEn":  "A magnificent harmony of extra crispy on the outside, juicy on the inside chicken fingers and hearty scoop fries, paired with our specially formulated dip sauce and a slightly smoky, mouth-watering BBQ sauce. An indispensable, delicious dish for those who love bold flavors and barbecue notes.\n\n(Allergens \u0026 Calories: Contains gluten, dairy product, mustard product. / 765 kcal)",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -815,6 +879,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/cin/beefeater.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -828,6 +893,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4051_1784139633063.webp",
                          "description":  "Ananas, çilek ve elmanın tatlı uyumu, narenciye ferahlığı ve soda ile hazırlanan ipeksi köpüklü ferahlatıcı alkolsüz kokteyl.",
                          "descriptionEn":  "Bringing together the sweet harmony of pineapple, strawberry, and apple with the freshness of citrus and the vibrancy of soda under a silky foam, the Pineapple Dream offers you a non-alcoholic, fruit-filled, and refreshing break.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -841,6 +907,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4052_1784139344445.webp",
                          "description":  "Taze çilek, nane, misket limonu ve zencefil gazozunun canlı dokunuşuyla enerjik bir alkolsüz kokteyl.",
                          "descriptionEn":  "Blending the refreshing aroma of fresh strawberries and mint with the vibrancy of lime and the slightly spicy touch of ginger ale, the Strawberry Crush offers you an energetic and refreshing non-alcoholic break.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -854,6 +921,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4053_1784139433785.webp",
                          "description":  "Taze fesleğen, nane, misket limonu ve maden suyunun serinletici ferahlığı.",
                          "descriptionEn":  "Blending the aromatic harmony of fresh basil and mint with the tart crispness of lime and the cooling vibrancy of sparkling water, the Mint-Basil Limeade offers you a fresh, non-alcoholic break straight from nature.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -867,6 +935,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4054_1784139659044.webp",
                          "description":  "Domates suyu, taze limon ve karakteristik baharatların canlandırıcı alkolsüz uyumu.",
                          "descriptionEn":  "Prepared with the bold blend of tomato juice, fresh lemon, and characteristic spices, the Virgin Mary offers you an invigorating and extraordinary non-alcoholic cocktail experience with its rich aroma and slightly spicy touch.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -880,6 +949,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4056_1784139569205.webp",
                          "description":  "Tatlı ananas suyu ve hindistan cevizi kreminin tropikal buluşması.",
                          "descriptionEn":  "Prepared with the tropical meeting of sweet pineapple juice and coconut cream, the Virgin Colada invites you to a non-alcoholic and refreshing island vacation with its creamy texture and unique taste.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -893,6 +963,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4055_1784139501604.webp",
                          "description":  "Taze nane yaprakları, misket limonu ve sodanın taptaze ferahlığı.",
                          "descriptionEn":  "Prepared with fresh mint leaves, the invigorating tartness of lime, and the refreshing touch of sparkling water, the Virgin Mojito brings the classic mojito flavor to your glass as a fresh, non-alcoholic coolness.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -906,6 +977,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/cin/beefeater_pink.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -919,6 +991,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/cin/hendricks.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -932,6 +1005,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/guinness_44cl_kutu.webp",
                          "description":  "İrlanda klasiği siyah bira; kavrulmuş arpa ve kahve notalarıyla yoğun gövdeli lezzet. (İlave Jägermeister shot 100 ₺)",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAn additional Jägermeister Shot for only 100 TL with all bottled and draught beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -945,6 +1019,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4050_1784138952729.webp",
                          "description":  "Havana Selection Rom, Malibu, Cardinal Melon, elderflower likör, lime suyu ve bal şurubu. Tropikal ve çiçeksi notalarıyla büyüleyici bir tat.",
                          "descriptionEn":  "Blending the character of aged rum with the tropical breeze of coconut and exotic fruits, and the elegant touch of elderflower, Kairos leaves a fascinating taste on the palate with its bright and floral profile.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -958,6 +1033,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4110_1788542877261.webp",
                          "description":  "Saat 22:00\u0027ye kadar geçerli seçili imza ve klasik kokteyller sadece 420 ₺! Favorinizi seçin, akşamın keyfini Helix\u0027te çıkarın.",
                          "descriptionEn":  "🍸 Happy Hour is here!\n\nThroughout August, enjoy our selected cocktails for just **₺420** every day until **10:00 PM**. Pick your favorite and make the most of your evening at Helix. 🥂\n\n#HelixEatDrink #HappyHour #CocktailTime #Canakkale\n",
+                         "isCampaign":  true,
                          "inStock":  true
                      },
                      {
@@ -971,6 +1047,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4102_1785235617414.webp",
                          "description":  "Absolut Elyx, Bianco vermut, acıbadem likörü ve aromatik bitter. Sakin, sofistike, derin ve zamansız bir tat.",
                          "descriptionEn":  "Absolut Elyx, Bianco Vermouth, Amaretto (Almond Liqueur), Aromatic Bitters. Calm - Sophisticated - Deep - Timeless",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -984,6 +1061,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4103_1785235642857.webp",
                          "description":  "Espolon Blanco Tekila, Absolut Citron, greyfurt suyu ve bal şurubu. Ferah, kalıcı ve natürel.",
                          "descriptionEn":  "Crafted with Espolon Blanco Tequila, Absolut Citron, Grapefruit Juice, and Honey Syrup.\n\nRefreshing - Lasting - Long - Natural",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -997,6 +1075,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4104_1785235667674.webp",
                          "description":  "London Dry Gin, muz likörü, Koskenkorva Ginger, Koskenkorva Minttu, lime suyu ve aromatik bitter. Canlı ve aromatik katmanlar.",
                          "descriptionEn":  "London Dry Gin\nBanana Liqueur\nKoskenkorva Ginger\nKoskenkorva Minttu\nLime Juice\nAromatic Bitters\n\nLively - Transforming - Layered - Aromatic",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1010,6 +1089,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/chivas_regal_12.webp",
                          "description":  "12 yıl boyunca meşe fıçılarda olgunlaştırılmış, harmanlanmış İskoç viskisi.",
                          "descriptionEn":  "A premium blended Scotch whisky aged for at least 12 years.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1023,6 +1103,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/ballantines_7.webp",
                          "description":  "İskoçya\u0027nın zengin karakterini taşıyan, meşe fıçılarda 7 yıl olgunlaştırılmış dengeli ve yumuşak içimli viski.",
                          "descriptionEn":  "A balanced and smooth whisky aged for 7 years in oak casks, carrying the rich character of Scotland.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1036,6 +1117,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/carlsberg_luna_sise.webp",
                          "description":  "Ay ışığı maltı ile hafifletilmiş, ekstra yumuşak içimli özel harman Carlsberg.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAll bottled and draft beers come with an additional Jägermeister Shot for only 100 TL!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1049,6 +1131,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/ballantines_10.webp",
                          "description":  "İskoçya\u0027nın önde gelen harman viskilerinden, 10 yıl meşe fıçılarda olgunlaştırılmış, pürüzsüz ve dengeli bir lezzet.",
                          "descriptionEn":  "A premium blended Scotch whisky, aged for 10 years in oak casks, offering a smooth and perfectly balanced flavor profile.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1062,6 +1145,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/glenlivet_founders.webp",
                          "description":  "Taze meyve notaları, kremsi karamel ve hafif baharat dokunuşlarıyla zenginleştirilmiş, yumuşak içimli bir Speyside viskisi.",
                          "descriptionEn":  "A smooth Speyside whisky featuring notes of fresh fruit, creamy caramel, and a delicate touch of spice.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1075,6 +1159,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/jack_daniels_oldno7.webp",
                          "description":  "Tennessee\u0027nin özel damıtım yöntemiyle üretilen, yumuşak içimli ve karakteristik odunsu notalara sahip ikonik viski.",
                          "descriptionEn":  "An iconic Tennessee whiskey known for its smooth finish and distinctive woody notes, crafted using a unique charcoal mellowing process.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1088,6 +1173,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/970_1781545390484.webp",
                          "description":  "Kuzu kulağının hafif mayhoş dokusu ve mürverin zarif aroması, taze salatalık ve cinin botanik gövdesiyle Dümrek\u0027te kusursuz bir dengeye ulaşıyor. (Cin, Mürver, Kuzu Kulağı, Salatalık, Portakal, Tatlı Ekşi Karışım)",
                          "descriptionEn":  "The slightly tart touch of sorrel and the elegant aroma of elderflower reach a perfect balance with fresh cucumber and the botanical body of gin at Dumrek. Crisp, vibrant, and whispering a fresh story from nature in every sip — a true signature flavor. (Gin, Elderflower, Sorrel, Cucumber, Orange, Sweet \u0026 Sour Mix) 🥒 🍸",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1101,6 +1187,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/3908_1783038907083.webp",
                          "description":  "İncecik açılmış yufka içinde eriyen enfes peynir dolgulu çıtır börekler; kaşık patates ve dip sos ile. (1100 kcal)",
                          "descriptionEn":  "A timeless classic served at its crispiest—delicate pastry rolls filled with rich, melted cheese and fried to golden perfection. Accompanied by crispy golden potato wedges and our signature dipping sauce, delivering warm, comforting flavor in every bite. (Allergens: Gluten, Dairy, Mustard) - 1100 kcal",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1114,6 +1201,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/jameson_coldbrew.webp",
                          "description":  "İrlanda viskisi ile zengin soğuk demleme kahve özünün mükemmel uyumu.",
                          "descriptionEn":  "A perfect blend of smooth Irish whiskey and rich cold brew coffee extract.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1127,6 +1215,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/vermut/garrone_rosso.webp",
                          "description":  "Karakteristik baharatlar, pelin otu ve karamel notalarıyla zengin geleneksel İtalyan kırmızı vermutu.",
                          "descriptionEn":  "Garrone Rosso is a spiced vermouth with unforgettable flavors, made from white wine and a selected mixture of aromatic herbs. It has a unique reddish-brown color from the addition of refined caramel. Its intense and brilliant red color opens with an intriguing bouquet of aromatic herbs, including prominent hints of wormwood, cardamom, and chamomile, with a slight touch of orange peel. On the palate, the complexity expands to reveal layers of flavors such as caramel, vanilla, and light notes of exotic spices, finishing with a pleasantly bitter aftertaste. Sweet and spicy notes are evident, leaving a lingering, pleasant bitterness on the palate.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1140,6 +1229,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/961_1786706039502.webp",
                          "description":  "Buzlu bardakta tuz ve taze limonla servis edilen Meksika usulü Carlsberg fıçı bira.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot for only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1153,6 +1243,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/3909_1783039679315.webp",
                          "description":  "Trüf aroması ve yıllanmış parmesan peyniriyle taçlandırılmış çıtır kaşık patatesler; imza dip sos eşliğinde. (520 kcal)",
                          "descriptionEn":  "Crispy golden potato wedges elevated with the exquisite aroma of truffle and the rich, savory character of aged Parmesan cheese. Paired with our signature dipping sauce, this dish delivers a truly refined gourmet experience. (Allergens: Dairy, Mustard) - 520 kcal)",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1166,6 +1257,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/frederik_neipa.webp",
                          "description":  "Puslu New England usulü, yoğun tropikal aromalı ve ipeksi içimli kraft ale.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAn additional Jägermeister Shot for only 100 TL with all bottled and draught beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1179,6 +1271,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/smooth_33cl.webp",
                          "description":  "Ekstra yumuşak içimli, hafif gövdeli pürüzsüz lager bira.",
                          "descriptionEn":  "A lager beer brewed from a single barley malt, with 4.5% alcohol content and a rich, creamy foam.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1192,6 +1285,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/aberlour_casg_annamh.webp",
                          "description":  "İspanyol şeri fıçılarında olgunlaştırılmış, yoğun meyve notaları, baharat ve tatlı karamel dokunuşlarına sahip zengin ve kompleks bir single malt viski.",
                          "descriptionEn":  "A rich and complex single malt whisky matured in Spanish sherry casks, offering intense notes of fruit, spice, and hints of sweet caramel.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1205,6 +1299,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/royal_salute_21_signature.webp",
                          "description":  "Özenle harmanlanmış, en az 21 yıl dinlendirilmiş, zengin ve kompleks karakterli premium harman viski.",
                          "descriptionEn":  "A premium blended scotch whisky, aged for a minimum of 21 years, offering a rich and complex character.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1218,6 +1313,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/scapa_glansa.webp",
                          "description":  "Amerikan meşe fıçılarında olgunlaştırılmış, isli ve turbalı notalara sahip, yumuşak ve tatlı bir Orkney adası viskisi.",
                          "descriptionEn":  "An Orkney island single malt whisky matured in American oak casks, featuring smooth, sweet notes with a subtle smoky, peaty finish.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1231,6 +1327,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/3910_1783041303699.webp",
                          "description":  "İçi yumuşacık, dışı çıtır kızarmış altın sarısı kaşık patatesler ve özel dip sos. (400 kcal)",
                          "descriptionEn":  "Golden potato wedges with a perfectly crispy exterior and a soft, fluffy center. Served with our signature dipping sauce, they are the perfect accompaniment to any meal. ((Allergens: Dairy, Mustard) - 400 kcal",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1244,6 +1341,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/frederik_marzen.webp",
                          "description":  "Karamel maltının dolgun lezzeti ve hafif kızarmış ekmek notalarıyla Bavyera tarzı lager.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot is only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1257,6 +1355,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/cardhu_12.webp",
                          "description":  "Speyside bölgesinden gelen, bal ve taze meyve notalarıyla dengeli, yumuşak içimli bir tek malt viski.",
                          "descriptionEn":  "A smooth, balanced single malt whisky from the Speyside region, featuring notes of honey and fresh fruit.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1270,6 +1369,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/cardhu_gold.webp",
                          "description":  "Tatlı elma, bal ve karamel notalarıyla zenginleşen, yumuşak içimli ve dengeli bir Single Malt viski.",
                          "descriptionEn":  "A smooth and balanced Single Malt whisky with rich notes of sweet apple, honey, and caramel.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1283,6 +1383,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/frederik_wheat_ipa.webp",
                          "description":  "Buğday birasının ipeksi yumuşaklığı ile IPA şerbetçiotlarının aromatik buluşması.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAn additional Jägermeister Shot for only 100 TL with all bottled and draught beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1296,6 +1397,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/jameson_stout.webp",
                          "description":  "Stout bira fıçılarında dinlendirilmiş, kakao, kahve ve hafif karamel notalarına sahip yumuşak içimli viski.",
                          "descriptionEn":  "Whiskey finished in stout beer barrels, featuring notes of cocoa, coffee, and subtle caramel.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1309,6 +1411,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/caol_ila_12.webp",
                          "description":  "İsli, deniz tuzu notalarıyla dengelenmiş, karakteristik Islay malt viskisi.",
                          "descriptionEn":  "A characteristic Islay single malt with smoky notes and a balanced touch of sea salt.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1322,6 +1425,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1019_1784137815904.webp",
                          "description":  "Aperol, Prosecco ve soda ile hazırlanan ferahlatıcı İtalyan kokteyli.",
                          "descriptionEn":  "Refreshing Italian cocktail made with Aperol, Prosecco, and soda.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1335,6 +1439,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/3911_1783041810093.webp",
                          "description":  "Özel çıtır kaplamalı sıcak turşu kızartması, kaşık patates ve dengeleyici dip sos. (460 kcal)",
                          "descriptionEn":  "A bold appetizer featuring tangy pickles coated in a perfectly crispy golden crust. Served with golden potato wedges and our signature dipping sauce, this unique dish is crafted for those who love discovering inventive flavors. (Allergens: Gluten, Dairy, Mustard) - 460 kcal)",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1348,6 +1453,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1032_1786705193650.webp",
                          "description":  "5 adet Absolut votka shot alana 1 adet hediye!",
                          "descriptionEn":  "",
+                         "isCampaign":  true,
                          "inStock":  true
                      },
                      {
@@ -1361,6 +1467,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/heineken_33cl.webp",
                          "description":  "%100 saf arpa maltından üretilen, dengeli ve ferahlatıcı dünya klasiği lager.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot for only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1374,6 +1481,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/mortlach_12.webp",
                          "description":  "Speyside bölgesinin zengin ve kompleks karakterli, yoğun aromalı prestijli tek malt viskisi.",
                          "descriptionEn":  "A prestigious single malt whisky from the Speyside region, known for its rich, complex character and intense flavor profile.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1387,6 +1495,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/votka/absolut_elyx.webp",
                          "description":  "Bakır imbiklerde damıtılmış, ipeksi bir dokuya ve taze tahıl aromasına sahip lüks İsveç votkası.",
                          "descriptionEn":  "A luxury Swedish vodka distilled in copper stills, featuring a silky texture and fresh grain notes.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1400,6 +1509,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/frederik_tropic.webp",
                          "description":  "Tropikal meyve aromaları ve hafif gövdesiyle ferahlatıcı kraft IPA.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAn additional Jägermeister Shot for only 100 TL with all bottled and draught beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1413,6 +1523,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/3907_1783037343724.webp",
                          "description":  "Uzak Doğu esintilerini barındıran enfes Moğol usulü karides, tatlı mısır dokunuşu, çıtır kaşık patates ve özel dip sos ile. (664 kcal)",
                          "descriptionEn":  "Succulent Mongolian-style shrimp infused with the bold flavors of the Far East, perfectly complemented by the delicate sweetness of premium sweet corn. Served with our signature dipping sauce and crispy golden potato wedges, this dish is crafted for those seeking a refined, premium dining experience. \n(Allergens: Gluten, Dairy, Egg, Mustard) - 664 kcal",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1426,6 +1537,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1009_1784137354492.webp",
                          "description":  "Vodka, cin, tekila, rom, triple sec, limon suyu ve kola ile hazırlanan ferahlatıcı bir kokteyl.",
                          "descriptionEn":  "A refreshing cocktail prepared with vodka, gin, tequila, rum, triple sec, lemon juice, and cola.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1439,6 +1551,7 @@
                          "image":  "",
                          "description":  "Espresso\u0027nun sıcak su ile seyreltilmesiyle hazırlanan yumuşak içimli taze filtre kahve deneyimi.",
                          "descriptionEn":  "An Americano is a coffee drink prepared by diluting an espresso with hot water, giving it a similar strength to, but different flavor from, traditionally brewed coffee.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1452,6 +1565,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/rom/havana_club_3.webp",
                          "description":  "Küba\u0027nın taze şeker kamışından damıtılmış, 3 yıl meşe fıçılarda dinlendirilmiş ikonik beyaz rom.",
                          "descriptionEn":  "An iconic white rum distilled from fresh Cuban sugar cane, aged for 3 years in oak barrels.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1465,6 +1579,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/votka/ketel_one.webp",
                          "description":  "Hollanda\u0027nın geleneksel bakır imbiklerinde damıtılmış, yumuşak içimli ve tahıl aromalı premium votka.",
                          "descriptionEn":  "A premium vodka distilled in traditional Dutch copper pot stills, known for its smooth texture and subtle grain notes.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1478,6 +1593,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/weihen_hefe_weiss_33cl.webp",
                          "description":  "Geleneksel Bavyera buğday birası; muz ve karanfil aromalarıyla tazeleyici dolgun lezzet.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot for only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1491,6 +1607,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/3981_1786706085276.webp",
                          "description":  "İsteğe göre erik, bamya ve kornişon turşu tabağı.",
                          "descriptionEn":  "Pickles made from plum, okra, or gherkin upon request.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1504,6 +1621,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/rom/havana_club_7.webp",
                          "description":  "Küba\u0027nın zengin şeker kamışı özlerinden damıtılmış, meşe fıçılarda uzun süre olgunlaştırılmış, karamel ve vanilya notalarına sahip premium bir rom.",
                          "descriptionEn":  "A premium rum distilled from Cuba\u0027s rich sugarcane, aged in oak barrels for an extended period, featuring notes of caramel and vanilla.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1517,6 +1635,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1005_1784137151015.webp",
                          "description":  "Yoğun espresso, votka ve kahve likörünün mükemmel uyumuyla hazırlanan klasik kokteyl.",
                          "descriptionEn":  "A classic cocktail prepared with the perfect harmony of intense espresso, vodka, and coffee liqueur.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1530,6 +1649,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/carlsberg_sise.webp",
                          "description":  "Danimarka klasiği, ferahlatıcı ve dengeli pilsner şişe bira.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot for only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1543,6 +1663,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1003_1784136935820.webp",
                          "description":  "Cin, limon suyu, şeker şurubu ve soda ile hazırlanan ferahlatıcı klasik kokteyl.",
                          "descriptionEn":  "A refreshing classic cocktail made with gin, lemon juice, simple syrup, and soda water.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1556,6 +1677,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/cin/larios.webp",
                          "description":  "Duble 740 ₺ - 12 farklı Akdeniz botanik ve narenciye özüyle beş kez damıtılmış premium cin.",
                          "descriptionEn":  "Duble 740",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1569,6 +1691,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/rom/havana_club_seleccion.webp",
                          "description":  "Havana Club\u0027ın özenle seçilmiş, en kaliteli ve en eski fıçılarından harmanlanmış, zengin aromalı premium rom.",
                          "descriptionEn":  "A premium rum blended from the finest and oldest casks of Havana Club, offering a rich and sophisticated flavor profile.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1582,6 +1705,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/cin/skagerrak.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1595,6 +1719,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1004_1784137111591.webp",
                          "description":  "Karayip romu, buz gibi kola ve taze misket limonunun efsanevi buluşmasıyla hazırlanan Cuba Libre, serinletici ve zamansız lezzetiyle size klasik bir kokteyl deneyimi sunuyor.",
                          "descriptionEn":  "Prepared with the legendary meeting of Caribbean rum, ice-cold cola, and fresh lime, the Cuba Libre offers you a classic cocktail experience with its refreshing and timeless taste.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1608,6 +1733,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/likor/baileys.webp",
                          "description":  "İrlanda kremalı likörü. Viski, krema ve kakao aromalarıyla yapılır.",
                          "descriptionEn":  "Irish cream liqueur. Made with Irish whiskey, cream, and cocoa flavors.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1621,6 +1747,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/4037_1784138076963.webp",
                          "description":  "Çavdar viskisinin güçlü duruşu, tatlı vermutun yumuşaklığı ve aromatik bitterlerin sofistike dokunuşuyla hazırlanan Manhattan, klasikleşmiş zarifliğiyle size gerçek ve zamansız bir kokteyl deneyimi sunuyor.",
                          "descriptionEn":  "Prepared with the strong stance of rye whiskey, the softness of sweet vermouth, and the sophisticated touch of aromatic bitters, the Manhattan offers you a true and timeless cocktail experience with its classic elegance.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1634,6 +1761,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/frederik_ipa.webp",
                          "description":  "Şerbetçiotu zenginliği, çam ve narenciye aromalarıyla dengelenmiş gövdeli kraft IPA.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot is only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1647,6 +1775,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/likor/campari.webp",
                          "description":  "İtalyan kökenli, acımsı ve ferahlatıcı bir tada sahip, genellikle aperitif olarak tüketilen kırmızı likör.",
                          "descriptionEn":  "An Italian bitter liqueur with a distinctive red color, known for its refreshing and bittersweet taste, commonly enjoyed as an aperitif.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1660,6 +1789,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/cin/larios.webp",
                          "description":  "Akdeniz\u0027in tazeleyici notalarına sahip klasik Larios London Dry Gin\u0027den hazırlanan shot.",
                          "descriptionEn":  "A shot prepared from the classic Larios London Dry Gin with refreshing Mediterranean notes.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1673,6 +1803,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/desperados_33cl.webp",
                          "description":  "Tekila aroması ve narenciye notalarıyla zenginleştirilmiş dinamik parti birası.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAn additional Jägermeister Shot for only 100 TL with all bottled and draught beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1686,6 +1817,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1143_1783094536979.webp",
                          "description":  "Dışı çıtır çıtır, içi yumuşacık taze midyeler; özel tartar sos eşliğinde.",
                          "descriptionEn":  "Crispy on the outside, tender fresh mussels, served with a special sauce.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1699,6 +1831,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1020_1784137838119.webp",
                          "description":  "Cin, Campari ve tatlı vermut ile hazırlanan klasik İtalyan kokteyli.",
                          "descriptionEn":  "A classic Italian cocktail made with gin, Campari, and sweet vermouth.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1712,6 +1845,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/shankys_whip.webp",
                          "description":  "İrlanda viskisi, doğal vanilya ve karamel aromalarının birleşimiyle üretilen, yumuşak içimli siyah bir likördür.",
                          "descriptionEn":  "A smooth black liqueur made with a blend of Irish whiskey, natural vanilla, and caramel flavors.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1725,6 +1859,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1010_1784137384759.webp",
                          "description":  "Tekila, portakal likörü ve misket limonu suyu ile hazırlanan ferahlatıcı bir klasik kokteyl.",
                          "descriptionEn":  "A refreshing classic cocktail made with tequila, orange liqueur, and lime juice.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1738,6 +1873,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/votka/absolut.webp",
                          "description":  "Premium İsveç votkası.",
                          "descriptionEn":  "Premium Swedish vodka.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1751,6 +1887,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/likor/baileys.webp",
                          "description":  "İrlanda kreması likörü.",
                          "descriptionEn":  "Irish cream liqueur.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1764,6 +1901,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1011_1784137411827.webp",
                          "description":  "Rom, misket limonu, taze nane, şeker ve soda ile hazırlanan ferahlatıcı klasik kokteyl.",
                          "descriptionEn":  "A refreshing classic cocktail made with rum, lime, fresh mint, sugar, and soda water.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1777,6 +1915,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/3905_1783036521352.webp",
                          "description":  "Altın renginde kızarmış çıtır tavuk lokmaları, hafif acılı kremsi dinamit sos ve kaşık patates ile. (780 kcal)",
                          "descriptionEn":  "Golden-fried crispy chicken bites coated in our signature Dynamite sauce, blending a creamy texture with a subtle spicy kick. Served with golden potato wedges and the chef’s special dipping sauce for a bold, unforgettable flavor experience. \n(Allergens: Gluten, Dairy, Mustard) - 780 kcal",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1790,6 +1929,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/gold_sise.webp",
                          "description":  "%100 malt, zengin köpüklü ve dolgun gövdeli Türkiye\u0027nin favori lageri.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot for only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1803,6 +1943,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/carlsberg_fici1.webp",
                          "description":  "Taze çekilmiş soğuk Carlsberg fıçı bira.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot for only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1816,6 +1957,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/tuborg_fici2.webp",
                          "description":  "Taze, buz gibi Tuborg Gold fıçı bira.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot for only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1829,6 +1971,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/frederik_yakima_ipa.webp",
                          "description":  "Yakima Vadisi şerbetçiotları ile demlenmiş tropikal meyve ve reçine notalarına sahip IPA.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAn additional Jägermeister Shot for only 100 TL with all bottled and draught beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1842,6 +1985,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/tekila/codigo_blanco.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1855,6 +1999,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/tekila/codigo_rosa.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1868,6 +2013,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/rom/bumbu.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1881,6 +2027,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/jameson.webp",
                          "description":  "Jameson İrlanda Viski shot.",
                          "descriptionEn":  "Jameson Irish Whiskey shot.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1894,6 +2041,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/chivas_regal_12.webp",
                          "description":  "Pürüzsüz, zengin ve cömert lezzet profiliyle bilinen 12 yıllık harmanlanmış Scotch viski.",
                          "descriptionEn":  "A 12-year-old blended Scotch whisky known for its smooth, rich, and generous flavor profile.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1907,6 +2055,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/likor/valhalla.webp",
                          "description":  "Yoğun ve güçlü bir bitkisel likör shot\u0027ı.",
                          "descriptionEn":  "An intense and strong herbal liqueur shot.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1920,6 +2069,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/jack_daniels_oldno7.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1933,6 +2083,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/cin/malfy.webp",
                          "description":  "Özel aromalı İtalyan cin shot.",
                          "descriptionEn":  "Special flavored Italian gin shot.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1946,6 +2097,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/sampanya/garrone_prosecco.webp",
                          "description":  "İtalyan köpüklü şarap / Prosecco.",
                          "descriptionEn":  "Champagne — sparkling wine",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1959,6 +2111,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/lot40.webp",
                          "description":  "Kanada çavdar viskisi; baharatlı, meyvemsi ve hafif odunsu notalara sahip kompleks bir lezzet.",
                          "descriptionEn":  "Canadian rye whisky featuring complex notes of spice, dried fruit, and a subtle woody finish.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1972,6 +2125,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/chivas_regal_13_sherry.webp",
                          "description":  "Oloroso şeri fıçılarında olgunlaştırılmış, zengin ve tatlı notalara sahip harman viski.",
                          "descriptionEn":  "Blended whisky matured in Oloroso sherry casks, featuring rich and sweet notes.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1985,6 +2139,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/ballantines_finest.webp",
                          "description":  "İskoçya\u0027nın dengeli ve yumuşak içimli, karakteristik harman viskisi.",
                          "descriptionEn":  "A balanced and smooth blended Scotch whisky with a characteristic flavor profile.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -1998,6 +2153,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/ballantines_17.webp",
                          "description":  "En az 17 yıl meşe fıçılarda dinlendirilmiş, yumuşak, zengin ve kompleks aromalara sahip özel harman viski.",
                          "descriptionEn":  "A premium blended Scotch whisky aged for at least 17 years, offering a smooth, rich, and complex flavor profile.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2011,6 +2167,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/glenlivet_12.webp",
                          "description":  "İskoçya\u0027nın Speyside bölgesinden gelen, yumuşak içimli, meyvemsi ve vanilya notalarına sahip 12 yıllık single malt viski.",
                          "descriptionEn":  "A 12-year-old single malt Scotch whisky from Speyside, known for its smooth, fruity character with delicate notes of vanilla.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2024,6 +2181,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/jameson.webp",
                          "description":  "İrlanda harman viskisi; üçlü damıtma yöntemiyle elde edilen yumuşak ve dengeli bir içim.",
                          "descriptionEn":  "Irish blended whiskey; a smooth and balanced spirit achieved through triple distillation.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2037,6 +2195,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/woodford.webp",
                          "description":  "Kentucky\u0027nin kalbinde, küçük partiler halinde üretilen, zengin karamel, vanilya ve meşe notalarına sahip dengeli bir bourbon viski.",
                          "descriptionEn":  "A balanced Kentucky bourbon whiskey produced in small batches, featuring rich notes of caramel, vanilla, and oak.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2050,6 +2209,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/chivas_regal_18.webp",
                          "description":  "En az 18 yıl boyunca meşe fıçılarda olgunlaştırılmış, zengin, kompleks ve kadifemsi notalara sahip harman viski.",
                          "descriptionEn":  "A rich, complex, and velvety blended Scotch whisky, aged for at least 18 years in oak casks.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2063,6 +2223,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/joint_bourbon.webp",
                          "description":  "Özenle damıtılmış, meşe fıçılarda dinlendirilmiş zengin aromalı Amerikan viskisi.",
                          "descriptionEn":  "Rich flavored American whiskey, carefully distilled and aged in oak barrels.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2076,6 +2237,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/votka/absolut.webp",
                          "description":  "İsveç\u0027in ikonik buğday bazlı, pürüzsüz ve saf votkası.",
                          "descriptionEn":  "Sweden\u0027s iconic wheat-based, smooth, and pure vodka.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2089,6 +2251,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/pike_creek.webp",
                          "description":  "Kanada usulü, fıçıda olgunlaştırılmış, yumuşak içimli ve hafif baharatlı notalara sahip viski.",
                          "descriptionEn":  "Canadian whisky finished in rum barrels, offering a smooth profile with notes of dried fruit and spice.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2102,6 +2265,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/dimple_golden.webp",
                          "description":  "İskoçya\u0027nın seçkin harman viskisi; bal, meyve ve hafif isli notalarıyla yumuşak bir içim sunar.",
                          "descriptionEn":  "A premium Scotch blended whisky, offering a smooth palate with notes of honey, fruit, and a delicate touch of peat smoke.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2115,6 +2279,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/bulleit_bourbon.webp",
                          "description":  "Yüksek çavdar içerikli, baharatlı ve dolgun gövdeli, pürüzsüz bitişli Kentucky bourbon viskisi.",
                          "descriptionEn":  "A high-rye Kentucky bourbon whiskey with a spicy, full-bodied character and a smooth finish. (Double 1100 ₺)",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2128,6 +2293,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/votka/koskenkorva.webp",
                          "description":  "Finlandiya\u0027nın saf arpa ve doğal kaynak suyundan üretilen, yumuşak içimli premium votka.",
                          "descriptionEn":  "A smooth premium vodka distilled from pure barley and natural spring water from Finland.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2141,6 +2307,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/cin/malfy.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2154,6 +2321,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/cin/monkey47_sloe.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2167,6 +2335,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/rom/bumbu.webp",
                          "description":  "Barbados\u0027ta üretilen, şeker kamışı ve egzotik baharatların eşsiz karışımıyla hazırlanan, yumuşak içimli ve aromatik bir rom.",
                          "descriptionEn":  "A smooth and aromatic rum crafted in Barbados, featuring a unique blend of sugarcane and exotic spices.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2180,6 +2349,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/likor/aperol.webp",
                          "description":  "Ravent, portakal, çeşitli otlar ve köklerin benzersiz karışımıyla hazırlanan, hafif acı-tatlı aromalı, canlı turuncu renkte İtalyan aperitifi.",
                          "descriptionEn":  "A vibrant, orange-hued Italian aperitif with a distinct bittersweet flavor profile, combining notes of rhubarb, orange, herbs, and roots.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2193,6 +2363,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/likor/kahlua.webp",
                          "description":  "Kahve aromalı likör.",
                          "descriptionEn":  "Coffee-flavored liqueur.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2206,6 +2377,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/likor/malibu.webp",
                          "description":  "Karayip romu ile yapılan, hindistan cevizi aromalı bir likör.",
                          "descriptionEn":  "A coconut-flavored liqueur made with Caribbean rum.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2219,6 +2391,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/likor/chambord.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2232,6 +2405,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/konyak/cemiyet.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2245,6 +2419,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/brendi/marcati_grappa_colli_veneti.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2258,6 +2433,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/likor/cointreau.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2271,6 +2447,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/enerji/redbull.webp",
                          "description":  "250ml Red Bull enerji içeceği.",
                          "descriptionEn":  "Energy drink",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2284,6 +2461,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/maden_suyu/maden_suyu.webp",
                          "description":  "Doğal zengin mineralli kaynak sodası.",
                          "descriptionEn":  "A refreshing carbonated drink.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2297,6 +2475,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/gazli/cocacola_330ml_kutu2.webp",
                          "description":  "Buz gibi ferahlatıcı klasik kutu kola.",
                          "descriptionEn":  "Classic sweet and refreshing carbonated soft drink.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2310,6 +2489,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/cin/monkey47.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2323,6 +2503,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/tekila/codigo_reposado.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2336,6 +2517,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/sarap/lillet_blanc.webp",
                          "description":  "Bordeaux şarapları ve narenciye likörlerinin meşe fıçılarda harmanlanmasıyla üretilen zarif Fransız aperitifi.",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2349,6 +2531,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/sarap/lillet_rose.webp",
                          "description":  "Kırmızı meyve ve portakal çiçeği aromalarıyla taze ve canlı Fransız roze aperitifi.",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2362,6 +2545,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/tekila/avion_silver.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2375,6 +2559,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/rom/havana_club_3.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2388,6 +2573,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/chivas_regal_smooth\u0026smoky.webp",
                          "description":  "Özel bir isli ekspresyonla hazırlanan, zengin ve pürüzsüz harman viski.",
                          "descriptionEn":  "A rich and smooth blended whisky crafted with a special smoky expression.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2401,6 +2587,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/chivas_regal_15.webp",
                          "description":  "Grande Champagne konyak fıçılarında özel olarak bitişi sağlanmış, 15 yıl dinlendirilmiş harman viski.",
                          "descriptionEn":  "A 15-year-old blended Scotch whisky, selectively finished in Grande Champagne Cognac casks for a velvety and fruity profile.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2414,6 +2601,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/monkey_shoulder.webp",
                          "description":  "Üç farklı Speyside tek malt viskisinin harmanlanmasıyla elde edilen, yumuşak, zengin ve vanilya notalarıyla öne çıkan harman viski.",
                          "descriptionEn":  "A smooth and rich blended malt Scotch whisky made from a selection of three different Speyside single malts, featuring notes of vanilla and spice.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2427,6 +2615,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/jameson_black_barrel.webp",
                          "description":  "İki kez kömürleşmiş fıçılarda olgunlaştırılmış, zengin, yoğun ve pürüzsüz bir tada sahip İrlanda viskisi.",
                          "descriptionEn":  "An Irish whiskey matured in double-charred barrels, offering a rich, intense, and smooth flavor profile.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2440,6 +2629,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/likor/garrone_limoncello.webp",
                          "description":  "İtalyan limon likörü",
                          "descriptionEn":  "Italian lemon liqueur",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2453,6 +2643,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/konyak/martell.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2466,6 +2657,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/sarap/suvla_kilitbahir.webp",
                          "description":  "Çanakkale / Bozcaada yöresi şarapları (Beyaz / Kırmızı / Roze seçenekleriyle).",
                          "descriptionEn":  "White / Red / Rose",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2479,6 +2671,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/jameson_black_barrel.webp",
                          "description":  "Premium İrlanda viskisi.",
                          "descriptionEn":  "Premium Irish whiskey.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2492,6 +2685,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/sarap/suvla_kilitbahir.webp",
                          "description":  "Çanakkale / Bozcaada yöresi kadeh şarap (Beyaz / Kırmızı / Roze seçenekleriyle).",
                          "descriptionEn":  "Red / White / Rose",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2505,6 +2699,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/deacon.webp",
                          "description":  "İsli, turbalı ve meyvemsi notalara sahip, zengin ve kompleks bir İskoç viskisi.",
                          "descriptionEn":  "A rich and complex Scotch whisky featuring smoky, peaty, and fruity notes.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2518,6 +2713,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/glenkinchie_12.webp",
                          "description":  "Düşük rakımlı Lowland bölgesinden gelen, çiçeksi notalara ve hafif, taze bir bitişe sahip zarif tek malt viski.",
                          "descriptionEn":  "An elegant single malt from the Lowlands, featuring floral notes and a light, fresh finish.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2531,6 +2727,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/cin/beefeater_orange.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2544,6 +2741,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/carlsberg_fici2.webp",
                          "description":  "Taze çekilmiş soğuk Carlsberg fıçı bira.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot for only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2557,6 +2755,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/ice_33cl.webp",
                          "description":  "Buz filtrasyon yöntemiyle üretilen berrak ve ferahlatıcı lager.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot for only 100 TL with all bottled and draught beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2570,6 +2769,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/guinness_fici1.webp",
                          "description":  "Fıçıdan çekilen kadifemsi nitro köpüğü ve kavrulmuş malt karakteriyle efsane İrlanda stout\u0027u.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot for only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2583,6 +2783,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/carlsberg_33cl.webp",
                          "description":  "Danimarka klasiği, pürüzsüz ve ferahlatıcı pilsner.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot for only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2596,6 +2797,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/sol_33cl.webp",
                          "description":  "Meksika\u0027nın güneşi; hafif içimli ve taze misket limonuyla servis edilen lager.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot for only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2609,6 +2811,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/1664blanc.webp",
                          "description":  "Fransız buğday birası; turunçgil ve kişniş aromalarıyla narenciye ferahlığı.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot is only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2622,6 +2825,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/gold_33cl.webp",
                          "description":  "%100 malt, kaliteli arpa ve şerbetçiotundan üretilen klasik lager.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot for only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2635,6 +2839,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/958_1786705840125.webp",
                          "description":  "Buzlu bardakta tuz ve taze limonla servis edilen Meksika usulü Tuborg fıçı bira.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot for only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2648,6 +2853,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/cin/beefeater_pink.webp",
                          "description":  "Çilek ve ahududu aromalarıyla harmanlanmış, klasik Beefeater cininin taze ve meyvemsi bir yorumu.",
                          "descriptionEn":  "A fresh and fruity interpretation of the classic Beefeater gin, infused with strawberry and raspberry flavours.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2661,6 +2867,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/chivas_regal_13_tequila.webp",
                          "description":  "Tequila fıçılarında kısmen dinlendirilmiş, özel harmanlanmış Scotch viski.",
                          "descriptionEn":  "Blended Scotch whisky selectively finished in tequila casks.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2674,6 +2881,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/viski/jameson_ipa.webp",
                          "description":  "IPA bira fıçılarında olgunlaştırılmış, narenciye ve şerbetçiotu notalarına sahip yumuşak içimli viski.",
                          "descriptionEn":  "Whiskey finished in IPA beer barrels, featuring smooth notes of citrus and hops.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2685,8 +2893,9 @@
                          "price":  200,
                          "volume":  "",
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1023_1786729891859.webp",
-                         "description":  "Saat 19:00\u0027a kadar geçerli özel fıçı bira. (Tüm biraların yanında ilave Jägermeister shot sadece 100 ₺)",
+                         "description":  "Saat 19:00\u0027a kadar geçerli özel indirimli fıçı bira fiyatı. (Tüm biraların yanında ilave Jägermeister shot sadece 100 ₺)",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot for only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  true,
                          "inStock":  true
                      },
                      {
@@ -2698,8 +2907,9 @@
                          "price":  225,
                          "volume":  "",
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/places/67/items/1024_1786729677316.webp",
-                         "description":  "Saat 19:00\u0027a kadar geçerli buzlu, tuz ve taze limonlu Meksika usulü fıçı. (İlave Jägermeister shot 100 ₺)",
+                         "description":  "Saat 19:00\u0027a kadar geçerli buzlu bardakta, tuz ve taze limonlu Meksika usulü fıçı bira. (İlave Jägermeister shot 100 ₺)",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAll bottled and draft beers come with an extra Jägermeister Shot for only 100 TL!",
+                         "isCampaign":  true,
                          "inStock":  true
                      },
                      {
@@ -2713,6 +2923,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/tekila/don_julio_blanco.webp",
                          "description":  "Yüksek kaliteli, %100 mavi agave tekilasının berrak ve saf tadı. Shot olarak servis edilir.",
                          "descriptionEn":  "The crisp, pure taste of high-quality, 100% blue agave tequila. Served as a shot.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2726,6 +2937,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/mezcal/ojo_de_tigre_reposado.webp",
                          "description":  "Amerikan meşe fıçılarda 5 ay dinlendirilmiş, kuru meyve, karamel ve hafif is aromalarına sahip el yapımı mezcal.",
                          "descriptionEn":  "Ojo de Tigre Reposado Mezcal is a 100% hand-crafted mezcal, aged for five months in American oak casks. It offers aromas of cooked agave, wood, and light smoke, with a palate revealing dried fruit, caramel, vanilla, and a herbaceous finish. This entry is for a \u0027Duble\u0027 (double) serving.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2739,6 +2951,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/cin/malfy_limone.webp",
                          "description":  "",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2752,6 +2965,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/gazli/sprite_330ml_kutu.webp",
                          "description":  "Limon ve misket limonu aromalı gazlı içecek.",
                          "descriptionEn":  "Lemon and lime flavored sparkling soft drink.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2765,6 +2979,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/maden_suyu/churchill.webp",
                          "description":  "Maden suyu, taze sıkılmış limon suyu ve kaya tuzu ile ferahlatıcı klasik.",
                          "descriptionEn":  "A refreshing drink made with sparkling water, lemon juice, and salt.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2778,6 +2993,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/filtresiz_sise.webp",
                          "description":  "Filtrelenmemiş doğal buğusu ve aromatik maya karakteriyle zenginleşen özel Tuborg.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot is only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2791,6 +3007,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/likor/jagermeister.webp",
                          "description":  "56 farklı şifalı bitki, çiçek ve kökün harmanıyla hazırlanan efsanevi buz gibi servis edilen Alman likörü.",
                          "descriptionEn":  "",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2804,6 +3021,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/tuborg_fici1.webp",
                          "description":  "Taze, buz gibi Tuborg Gold fıçı bira.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAdditional Jägermeister Shot for only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2817,6 +3035,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/rom/bumbu_xo.webp",
                          "description":  "18 yıla kadar eski burbon fıçılarında olgunlaştırılmış ve İspanyol şeri fıçılarında dinlendirilmiş birinci sınıf zengin rom.",
                          "descriptionEn":  "Bumbu XO is a premium aged rum, matured for up to 18 years in ex-bourbon barrels and finished in Spanish white oak sherry casks. It is known for its rich, complex flavor profile.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2830,6 +3049,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/frederik_brown_ale.webp",
                          "description":  "Kavrulmuş fındık, kakao ve karamel tatlarıyla doyurucu kraft ale.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Pairing\n\nAdditional Jägermeister Shot is only 100 TL with all bottled and draft beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2843,6 +3063,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/bira/tuborg/frederik_local.webp",
                          "description":  "Özel reçeteli yerel kraft bira.",
                          "descriptionEn":  "🍺 + 🦌 = Perfect Match\n\nAn additional Jägermeister Shot for only 100 TL with all bottled and draught beers!",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2856,6 +3077,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/likor/safari.webp",
                          "description":  "Mango, papaya, marakuya ve yabani misket limonu gibi egzotik meyvelerin eşsiz lezzet kombinasyonuna sahip, macera dolu bir meyve likörü.",
                          "descriptionEn":  "An adventurous exotic fruit flavoured liqueur with the unique flavour combination of mango, papaya, maracuja and wild lime.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2869,6 +3091,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/tekila/olmeca_altos_plata.webp",
                          "description":  "Pürüzsüz ve dengeli bir tada sahip %100 agave tekila. En iyi kokteyller için idealdir.",
                          "descriptionEn":  "A 100% agave tequila with a smooth and balanced taste. Ideal for the best cocktails.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2882,6 +3105,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/likor/skinos.webp",
                          "description":  "Sakız Adası\u0027nın nadir damla sakızı ağaçlarından elde edilen geleneksel Akdeniz likörü.",
                          "descriptionEn":  "Skinos Mastiha Liqueur is a distinctive Greek spirit crafted from the rare resin of mastic trees found exclusively on the island of Chios. With an alcohol content of 30% ABV, this lightly sweet liqueur offers a unique flavor profile characterized by notes of mint, pine, and Mediterranean herbs. It is produced through a traditional process of maceration and distillation, then balanced with sugar syrup. It can be enjoyed chilled, neat, or as a versatile ingredient in cocktails.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2895,6 +3119,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/tekila/olmeca_reposado.webp",
                          "description":  "Meksika\u0027nın Jalisco eyaletinden gelen, meşe fıçılarda dinlendirilmiş %100 mavi agav tekila.",
                          "descriptionEn":  "A 100% blue agave tequila from Jalisco, Mexico, aged in oak barrels.",
+                         "isCampaign":  false,
                          "inStock":  true
                      },
                      {
@@ -2908,6 +3133,7 @@
                          "image":  "https://bvvpftyullqdhifyxvfc.supabase.co/storage/v1/object/public/media/images/common/icecekler/alkollu/votka/absolut_elyx.webp",
                          "description":  "Absolut Elyx, pürüzsüz ve lüks bir deneyim sunan tek damıtım prosesiyle üretilmiş premium İsveç votkasıdır.",
                          "descriptionEn":  "Absolut Elyx is a premium Swedish vodka crafted from a single estate, offering a smooth and luxurious drinking experience.",
+                         "isCampaign":  false,
                          "inStock":  true
                      }
                  ]
