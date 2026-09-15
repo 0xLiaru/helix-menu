@@ -3,4 +3,6 @@
 *.txt
 *.html
 !index.html
+*.webp
+itemCategories_source.js
 edge_out.txt
