@@ -1,0 +1,6 @@
+*.ps1
+*.json
+*.txt
+*.html
+!index.html
+edge_out.txt

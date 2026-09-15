@@ -1,0 +1,178 @@
+/* Helix Bar & Drink - Sleek Modern Bar Typography & Styling */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap');
+
+:root {
+  --bg-main: #0a0b0e;
+  --bg-card: rgba(18, 20, 26, 0.78);
+  --bg-card-hover: rgba(26, 29, 38, 0.92);
+  --amber-gold: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Arka Plan: Üstteki Helix logosunun ve tabelanın parlaması için şeffaf başlayıp aşağıya doğru koyulaşan gradyan */
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: var(--bg-main);
+  background-image: 
+    linear-gradient(to bottom, rgba(10, 11, 14, 0.1) 0%, rgba(10, 11, 14, 0.3) 150px, rgba(10, 11, 14, 0.85) 300px, rgba(10, 11, 14, 0.98) 600px),
+    url('helix_bg.jpg');
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  color: #f3f4f6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Yatay Kaydırma */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Kategori Kapak Kartları */
+.category-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #181a22;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.category-card:active {
+  transform: scale(0.98);
+  border-color: rgba(245, 158, 11, 0.5);
+}
+
+.category-card img {
+  filter: brightness(1.05) contrast(1.02);
+}
+
+/* Sadece alttaki yazının okunması için ince, hafif alt gradyan (resmin %70'i tamamen parlak ve aydınlık kalır) */
+.category-card .cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 11, 14, 0.92) 0%, rgba(10, 11, 14, 0.45) 30%, transparent 60%);
+}
+
+/* Ürün Kartları */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.2s ease;
+}
+
+.glass-card:active {
+  background: var(--bg-card-hover);
+  border-color: rgba(245, 158, 11, 0.35);
+  transform: translateY(-1px);
+}
+
+.glass-nav {
+  background: rgba(10, 11, 14, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Ürün & Şişe Görselleri: Arka temayla uyumlu koyu zemin, içecekler parlak ve ön planda */
+.bottle-thumb {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  background: radial-gradient(circle at 50% 35%, rgba(35, 40, 54, 0.92), rgba(12, 14, 20, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  padding: 3px;
+  flex-shrink: 0;
+}
+
+.bottle-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 13px;
+  filter: brightness(1.05) contrast(1.04);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Şişe ve transparan cutout fotoğraflar */
+.bottle-thumb img.bottle-fit {
+  object-fit: contain;
+  padding: 3px;
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.65)) brightness(1.06) contrast(1.05);
+}
+
+.modal-bottle-img {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: radial-gradient(circle at 50% 35%, rgba(36, 42, 56, 0.9), rgba(10, 12, 17, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+.modal-bottle-img img {
+  max-height: 195px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.75)) brightness(1.05) contrast(1.04);
+}
+
+/* Rozetler */
+.badge-sub {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
+}
+
+/* Modal Bottom Sheet */
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.bottom-sheet {
+  background: #111319;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -15px 35px rgba(0, 0, 0, 0.85);
+  border-radius: 24px 24px 0 0;
+  animation: slideUp 0.25s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.out-of-stock {
+  filter: grayscale(0.9) opacity(0.5);
+}
