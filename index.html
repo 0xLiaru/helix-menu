@@ -38,20 +38,20 @@
   <div class="relative z-10 max-w-lg mx-auto min-h-screen pb-12">
 
     <!-- ÜST NAVBAR -->
-    <header class="glass-nav sticky top-0 z-40 px-5 py-3.5 flex items-center justify-between border-b border-stone-800/80">
-      <div onclick="showHomeCategories()" class="flex items-center gap-3 cursor-pointer">
+    <header class="glass-nav sticky top-0 z-40 px-4 py-3 flex items-center justify-between border-b border-stone-800/80">
+      <div onclick="showHomeCategories()" class="flex items-center gap-2.5 cursor-pointer">
         <!-- Orijinal Yuvarlak Helix Tabelası (Koyu Temayla Uyumlu) -->
-        <div class="w-9 h-9 rounded-full bg-stone-900 border border-amber-500/40 text-stone-200 flex items-center justify-center p-0.5 shadow-md flex-shrink-0">
+        <div class="w-10 h-10 rounded-full bg-stone-900 border-2 border-amber-500/50 text-stone-200 flex items-center justify-center p-0.5 shadow-md flex-shrink-0">
           <div class="w-full h-full rounded-full border border-stone-700/80 flex flex-col items-center justify-center text-center">
-            <span class="font-extrabold text-[10px] leading-none tracking-tighter text-white">Helix</span>
-            <span class="text-[6px] tracking-tight leading-none text-amber-400 font-semibold">bar&amp;drink</span>
+            <span class="font-extrabold text-[11px] leading-none tracking-tighter text-white">Helix</span>
+            <span class="text-[6.5px] tracking-tight leading-none text-amber-400 font-semibold mt-0.5">bar&amp;drink</span>
           </div>
         </div>
         <div>
-          <h1 class="font-display font-bold tracking-wide text-base text-white">
+          <h1 class="font-display font-bold tracking-wide text-base text-white leading-tight">
             Helix Bar &amp; Drink
           </h1>
-          <p class="text-[10px] text-stone-400 tracking-wide mt-0.5">Çanakkale • Matbaa Sokak</p>
+          <p class="text-[10px] text-stone-400 tracking-wide">Çanakkale • Matbaa Sokak</p>
         </div>
       </div>
 
@@ -67,16 +67,37 @@
       </div>
     </header>
 
-    <!-- Arka Plandaki İkonik Helix Tabelası ve Mekan Görünümü -->
-    <div class="h-48 sm:h-56 flex items-end px-5 pb-2">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/50 backdrop-blur-md border border-white/15 text-stone-300 text-xs shadow-lg">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="font-medium">Kemalpaşa Mah. Matbaa Sokak</span>
-      </div>
-    </div>
-
     <!-- 1. GÖRÜNÜM: SADECE KATEGORİLER (EN ÇOK SATAN KAPAK FOTOĞRAFLARI İLE) -->
-    <section id="home-categories-view" class="px-5 pt-2 space-y-3.5">
+    <section id="home-categories-view" class="px-4 pt-3 space-y-3.5">
+
+      <!-- HERO BANNER: İkonik Işıklı Helix Tabelası (Telefonda ve Masaüstünde Tam Görünür) -->
+      <div class="hero-banner-card relative h-56 w-full rounded-2xl overflow-hidden border border-stone-800/80 shadow-2xl bg-stone-950 flex flex-col justify-between p-4">
+        <!-- Orijinal Helix Tabelası Arka Planı (Tabelayı tam ortalayan ve tamamını gösteren pozisyon) -->
+        <div class="hero-banner-img"></div>
+        
+        <!-- Yumuşak Gece Karartması & Atmosfer Gradyanı -->
+        <div class="hero-banner-overlay"></div>
+
+        <!-- Üst: Rozetler -->
+        <div class="relative z-10 flex items-center justify-between">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-amber-500/30 text-[11px] font-semibold text-amber-400 shadow-md">
+            <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+            Canlı QR Menü
+          </span>
+          <span class="text-[11px] font-medium text-stone-300 bg-black/60 backdrop-blur-md border border-white/10 px-2.5 py-1 rounded-full">
+            Çanakkale
+          </span>
+        </div>
+
+        <!-- Alt: Mekan Konum Rozeti -->
+        <div class="relative z-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/70 backdrop-blur-md border border-white/15 text-stone-200 text-xs shadow-lg">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span class="font-medium">Kemalpaşa Mah. Matbaa Sokak</span>
+          </div>
+        </div>
+      </div>
+
       <div class="flex items-center justify-between pt-1 pb-0.5">
         <span class="text-xs font-bold text-stone-300 uppercase tracking-wider">Menü Kategorileri</span>
         <span class="text-[11px] text-amber-400 font-medium">Kategori Seçin</span>

@@ -13,20 +13,43 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Arka Plan: Üstteki Helix logosunun ve tabelanın parlaması için şeffaf başlayıp aşağıya doğru koyulaşan gradyan */
+/* Arka Plan: Koyu AMOLED gece teması */
 body {
   font-family: 'Inter', -apple-system, sans-serif;
   background-color: var(--bg-main);
-  background-image: 
-    linear-gradient(to bottom, rgba(10, 11, 14, 0.1) 0%, rgba(10, 11, 14, 0.3) 150px, rgba(10, 11, 14, 0.85) 300px, rgba(10, 11, 14, 0.98) 600px),
-    url('helix_bg.jpg');
-  background-size: 100% auto;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-image: radial-gradient(ellipse at 50% 0%, rgba(30, 34, 48, 0.5) 0%, rgba(10, 11, 14, 1) 75%);
+  background-attachment: fixed;
   color: #f3f4f6;
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+/* İkonik Helix Tabelası Hero Kartı (Telefonda ve Masaüstünde Tam Görünür) */
+.hero-banner-card {
+  position: relative;
+  height: 224px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #0a0b0e;
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-banner-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('helix_bg.jpg');
+  background-size: cover;
+  background-position: center top;
+  filter: brightness(1.08) contrast(1.03);
+}
+
+.hero-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 11, 14, 0.95) 0%, rgba(10, 11, 14, 0.2) 45%, rgba(10, 11, 14, 0.35) 100%);
 }
 
 .font-display {
